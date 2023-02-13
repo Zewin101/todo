@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:todo/modules/setting/setting.dart';
+import 'package:todo/modules/tasks_list/tasks_list.dart';
 
 class MyProvider extends ChangeNotifier {
   int changeIndex = 0;
@@ -16,10 +18,15 @@ class MyProvider extends ChangeNotifier {
       context: context,
       initialDate: selectedDate,
       firstDate: selectedDate,
-      lastDate: selectedDate.add(Duration(days: 365)),
+      lastDate: selectedDate.add(const Duration(days: 365)),
     );
     if(chosenData==null)return;
     selectedDate=chosenData;
     notifyListeners();
   }
+  //-------------------------------------------------------------------------
+List<Widget>taps=[
+  SettingTab(),
+  TasksListTab()
+];
 }

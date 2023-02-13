@@ -5,6 +5,9 @@ class TasksListTab extends StatelessWidget {
   static const String routName = "tasks";
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+
+      color: Colors.deepPurpleAccent,
+    );
   }
 }

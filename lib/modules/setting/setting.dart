@@ -5,6 +5,9 @@ class SettingTab extends StatelessWidget {
   static const String routName = "setting";
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+
+      color: Colors.grey,
+    );
   }
 }

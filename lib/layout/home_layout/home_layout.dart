@@ -32,11 +32,11 @@ class HomeLayout extends StatelessWidget {
           elevation: 0,
           items: const [
             BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage('assets/images/icon_list.png')),
-              label: 'List'),
+                icon: ImageIcon(AssetImage('assets/images/icon_list.png')),
+                label: 'List'),
             BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage('assets/images/icon_settings.png')),
-              label: 'Setting'),
+                icon: ImageIcon(AssetImage('assets/images/icon_settings.png')),
+                label: 'Setting'),
           ],
           onTap: (index) {
             provider.changeTap(index);
@@ -45,15 +45,16 @@ class HomeLayout extends StatelessWidget {
           iconSize: 35,
         ),
       ),
+      body:provider.taps[provider.changeIndex] ,
     );
   }
 
   void openBottomSheet(BuildContext context) {
-showModalBottomSheet(
-    context: context,
-    builder: (context) {
-      return AddTasks();
-    },);
-
+    showModalBottomSheet(
+      context: context,
+      builder: (context) {
+        return AddTasks();
+      },
+    );
   }
 }
